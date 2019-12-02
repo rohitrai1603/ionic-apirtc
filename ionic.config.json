@@ -1,0 +1,7 @@
+{
+  "name": "vedio-conference",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

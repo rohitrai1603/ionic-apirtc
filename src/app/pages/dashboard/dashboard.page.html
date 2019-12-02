@@ -1,0 +1,22 @@
+
+<ion-content padding no-bounce>
+  <div *ngFor="let user of listofUser">
+    <ion-item>
+      <ion-avatar slot="start">
+        <img *ngIf="user.gender == 'm'" src="{{user.image}}">
+        <img *ngIf="user.gender == 'f'" src="{{user.image}}">
+      </ion-avatar>
+      <ion-label>{{user.name}}</ion-label>
+      <ion-label>{{user.phone}}</ion-label>
+      <span class="input-group-btn">
+          <ion-button id="callAudio" (click)="audioCall(user)">
+            <ion-icon ios="ios-call" md="md-call"></ion-icon>
+          </ion-button>
+          <ion-button id="callVideo" (click)="videoCall(user)">
+              <ion-icon ios="ios-videocam" md="md-videocam"></ion-icon>
+            </ion-button>
+      </span>
+    </ion-item>
+  </div>
+  <legend id="my-number"></legend>
+</ion-content>
